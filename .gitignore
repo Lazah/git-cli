@@ -33,3 +33,6 @@ go.work.sum
 
 #ignore json files
 *.json
+
+#ignore yaml files
+*.yaml
