@@ -11,14 +11,8 @@ import (
 
 // packageCmd represents the package command
 var packageOrgCmd = &cobra.Command{
-	Use:   "package",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "org",
+	Short: "org sub comands related to packages",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("package called")
 	},

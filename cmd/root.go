@@ -1,6 +1,5 @@
 /*
 Copyright © 2025 Pentti Laitinen (pentti.laitinen@gmail.com)
-
 */
 package cmd
 
@@ -46,10 +45,11 @@ func init() {
 	// will be global for your application.
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.git-cli.yaml)")
+	rootCmd.PersistentFlags().String("token", "", "personal access token used to authenticate to the instance")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	//rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 // initConfig reads in config file and ENV variables if set.

@@ -11,8 +11,8 @@ import (
 
 // packageCmd represents the package command
 var packageOrgDeleteCmd = &cobra.Command{
-	Use:   "package",
-	Short: "A brief description of your command",
+	Use:   "delete",
+	Short: "delete packages or package versions from org",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 
@@ -41,6 +41,8 @@ func init() {
 	packageOrgDeleteCmd.Flags().Int("keep", 10, "how many versions to keep")
 	packageOrgDeleteCmd.Flags().String("orgName", "", "organization name who owns the package")
 	packageOrgDeleteCmd.Flags().String("packageName", "", "package name")
+	packageOrgDeleteCmd.Flags().Bool("deletePackage", false, "delete whole package instead of versions of it")
+	packageOrgDeleteCmd.Flags().String("packageType", "container", "what type of package to operate on")
 	packageOrgDeleteCmd.MarkFlagRequired("orgName")
 	packageOrgDeleteCmd.MarkFlagRequired("packageName")
 	packageOrgDeleteCmd.MarkFlagsOneRequired("tagged", "untagged")
