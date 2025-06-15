@@ -36,4 +36,12 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// packageCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	packageOrgDeleteCmd.Flags().BoolP("untagged", "u", false, "remove untagged version of package")
+	packageOrgDeleteCmd.Flags().BoolP("tagged", "t", false, "remove tagged versions of package")
+	packageOrgDeleteCmd.Flags().Int("keep", 10, "how many versions to keep")
+	packageOrgDeleteCmd.Flags().String("orgName", "", "organization name who owns the package")
+	packageOrgDeleteCmd.Flags().String("packageName", "", "package name")
+	packageOrgDeleteCmd.MarkFlagRequired("orgName")
+	packageOrgDeleteCmd.MarkFlagRequired("packageName")
+	packageOrgDeleteCmd.MarkFlagsOneRequired("tagged", "untagged")
 }
