@@ -4,8 +4,6 @@ Copyright © 2025 Pentti Laitinen (pentti.laitinen@gmail.com)
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -13,9 +11,6 @@ import (
 var packageOrgCmd = &cobra.Command{
 	Use:   "org",
 	Short: "org sub comands related to packages",
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("package called")
-	},
 }
 
 func init() {
